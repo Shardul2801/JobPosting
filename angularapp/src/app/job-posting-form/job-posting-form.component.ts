@@ -17,6 +17,9 @@ export class JobPostingFormComponent implements OnInit {
     if(this.jobPostingForm.valid){
       this.js.createJobPosition(this.jobPostingForm.value).subscribe(()=>{})
     }
+    else{
+      
+    }
 
   }
   ngOnInit(): void {
