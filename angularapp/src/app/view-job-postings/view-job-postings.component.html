@@ -1,13 +1,27 @@
 <p>view-job-postings works!</p>
 <table>
     <thead>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
+        <th>Title</th>
+        <th>Department</th>
+        <th>Location</th>
+        <th>Responsibilities</th>
+        <th>Qualifications</th>
+        <th>ApplicationDeadline</th>
+        <th>Total Applicants</th>
+        <th>Action</th>
     </thead>
+    <tbody>
+        <tr *ngFor="let p of jobPostings">
+            <td>{{p.title}}</td>
+            <td>{{p.department}}</td>
+            <td>{{p.location}}</td>
+            <td>{{p.responsibilities}}</td>
+            <td>{{p.qualifications}}</td>
+            <td>{{p.applicationDeadline}}</td>
+            <td>{{fetchTotalApplicants(p.id)}}</td>
+            <td>
+                Closed
+            </td>
+        </tr>
+    </tbody>
 </table>

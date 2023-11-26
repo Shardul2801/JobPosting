@@ -9,6 +9,7 @@ import { JobPosition } from 'src/models/job-position.model';
 })
 export class ViewJobPostingsComponent implements OnInit {
   jobPostings:JobPosition[]=[]
+  totalApplicant:number
   constructor(private js:JobService) { }
   loadJobPostings(){
     this.js.getJobPostings().subscribe((data:JobPosition[])=>{
@@ -16,8 +17,10 @@ export class ViewJobPostingsComponent implements OnInit {
     })
   }
 
-  fetchTotalApplicants(){
-    
+  fetchTotalApplicants(id:number){
+    this.js.getTotalApplicantsByJobPositionId(id).subscribe((data)=>{
+      this.totalApplicant = data;
+    })
   }
 
   ngOnInit(): void {
