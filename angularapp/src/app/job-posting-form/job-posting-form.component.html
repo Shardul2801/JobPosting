@@ -1,0 +1,39 @@
+<p>job-posting-form works!</p>
+<h2>Create Job Posting</h2>
+<div>
+    
+    <form [formGroup]="jobPostingForm" (ngSubmit)="submitJobPosting()">
+        
+            <label for="title"></label>
+            <input type="text" id="title" name="title" formControlName="title">
+        
+
+        
+            <label for="department"></label>
+            <input type="text" id="department" name="department" formControlName="department">
+        
+
+        
+            <label for="location"></label>
+            <input type="text" id="location" name="location" formControlName="location">
+        
+
+        
+            <label for="responsibilities"></label>
+            <textarea type="text" id="responsibilities" name="responsibilities" formControlName="responsibilities">
+        
+
+        
+            <label for="qualifications"></label>
+            <textarea type="text" id="qualifications" name="qualifications" formControlName="qualifications">
+        
+
+        
+            <label for="applicationDeadline"></label>
+            <input type="text" id="applicationDeadline" name="applicationDeadline" formControlName="applicationDeadline">
+        
+
+        <button type="submit">Submit</button>
+    </form>
+
+</div>

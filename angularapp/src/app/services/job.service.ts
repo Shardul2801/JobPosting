@@ -41,7 +41,7 @@ export class JobService {
   }
 
   getTotalApplicantsByJobPositionId(jobPositionId:number):Observable<any>{
-    return this.httpclient.get<any>(`${this.apiUrl} + /applications/by-job-position?jobPositionId= ${jobPositionId}`)
+    return this.httpclient.get<any>(`${this.apiUrl}/applications/by-job-position?jobPositionId=${jobPositionId}`)
   }
 
 }
