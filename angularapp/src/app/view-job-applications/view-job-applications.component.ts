@@ -8,15 +8,20 @@ import { JobPosition } from 'src/models/job-position.model';
   styleUrls: ['./view-job-applications.component.css']
 })
 export class ViewJobApplicationsComponent implements OnInit {
-  loadJobApplication:JobApplication[]=[]
+  jobApplications:JobApplication[]=[]
   constructor(private js:JobService) { }
   
+    
+  loadJobApplications(){
     this.js.getJobApplications().subscribe((data:JobApplication[])=>{
-      this.jobApplications=data;
-  
+      this.jobApplications = data;
+    })
   }
+  
 
   ngOnInit(): void {
+    
+ 
   }
 
 }
