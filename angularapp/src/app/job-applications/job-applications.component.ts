@@ -5,12 +5,13 @@ import { JobService } from '../services/job.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-job-application',
-  templateUrl: './job-application.component.html',
-  styleUrls: ['./job-application.component.css']
+  selector: 'app-job-applications',
+  templateUrl: './job-applications.component.html',
+  styleUrls: ['./job-applications.component.css']
 })
-export class JobApplicationComponent implements OnInit {
+export class JobApplicationsComponent implements OnInit {
   jobApplicationForm :FormGroup
+  jobPositions: JobPosition[]=[]
   constructor(private js:JobService, private fb :FormBuilder) { }
 
   applyForJob(){
@@ -18,7 +19,14 @@ export class JobApplicationComponent implements OnInit {
   }
   ngOnInit(): void {
     this.jobApplicationForm = this.fb.group ({
-      
+      jobPositionId: [''],
+      applicantName:[''],
+      status:['Pending']
+
+    })
+
+    this.js.getJobPostings().subscribe((data:JobPosition[])=>{
+      this.jobPositions = data;
     })
   }
 

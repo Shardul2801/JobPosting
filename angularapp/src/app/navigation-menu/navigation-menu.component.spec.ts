@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JobApplicationComponent } from './job-application.component';
+import { NavigationMenuComponent } from './navigation-menu.component';
 
-describe('JobApplicationComponent', () => {
-  let component: JobApplicationComponent;
-  let fixture: ComponentFixture<JobApplicationComponent>;
+describe('NavigationMenuComponent', () => {
+  let component: NavigationMenuComponent;
+  let fixture: ComponentFixture<NavigationMenuComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ JobApplicationComponent ]
+      declarations: [ NavigationMenuComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(JobApplicationComponent);
+    fixture = TestBed.createComponent(NavigationMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

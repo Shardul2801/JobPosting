@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JobPostingFormComponent } from './job-posting-form/job-posting-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { JobApplicationComponent } from './job-application/job-application.component';
+import { JobApplicationsComponent } from './job-applications/job-applications.component';
+import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 // import { JobPostingFormComponent } from './job-posting-form/job-posting-form.component';
 @NgModule({
   declarations: [
     AppComponent,
     JobPostingFormComponent,
-    JobApplicationComponent
+    JobApplicationsComponent,
+    NavigationMenuComponent
   ],
   imports: [
     BrowserModule,
