@@ -19,8 +19,8 @@ export class JobApplicationsComponent implements OnInit {
   }
   ngOnInit(): void {
     this.jobApplicationForm = this.fb.group ({
-      jobPositionId: [''],
-      applicantName:[''],
+      jobPositionId: ['',[Validators.required]],
+      applicantName:['',[Validators.required]],
       status:['Pending']
 
     })

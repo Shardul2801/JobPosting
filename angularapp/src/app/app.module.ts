@@ -7,13 +7,17 @@ import { JobPostingFormComponent } from './job-posting-form/job-posting-form.com
 import { ReactiveFormsModule } from '@angular/forms';
 import { JobApplicationsComponent } from './job-applications/job-applications.component';
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
+import { ViewJobPostingsComponent } from './view-job-postings/view-job-postings.component';
+import { ViewJobApplicationsComponent } from './view-job-applications/view-job-applications.component';
 // import { JobPostingFormComponent } from './job-posting-form/job-posting-form.component';
 @NgModule({
   declarations: [
     AppComponent,
     JobPostingFormComponent,
     JobApplicationsComponent,
-    NavigationMenuComponent
+    NavigationMenuComponent,
+    ViewJobPostingsComponent,
+    ViewJobApplicationsComponent
   ],
   imports: [
     BrowserModule,

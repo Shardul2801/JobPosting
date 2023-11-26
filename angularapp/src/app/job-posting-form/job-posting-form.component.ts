@@ -18,7 +18,7 @@ export class JobPostingFormComponent implements OnInit {
       this.js.createJobPosition(this.jobPostingForm.value).subscribe(()=>{})
     }
     else{
-      
+
     }
 
   }
@@ -26,10 +26,10 @@ export class JobPostingFormComponent implements OnInit {
     this.jobPostingForm = this.fb.group({
       title:['',[Validators.required]],
       department:['',[Validators.required]],
-      location:[''],
-      responsibilities:[''],
-      qualifications:[''],
-      applicationDeadline:[''],
+      location:['',[Validators.required]],
+      responsibilities:['',[Validators.required]],
+      qualifications:['',[Validators.required]],
+      applicationDeadline:['',[Validators.required]],
     })
   }
 
